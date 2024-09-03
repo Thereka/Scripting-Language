@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration System</title>
+    <style>
+        /* Basic styles for the course listing */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .course {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .course h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .course p {
+            margin: 5px 0;
+        }
+        .register-button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .register-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Available Courses</h1>
+
+    <!-- Example course listing -->
+    <div class="course" data-course-id="CS101">
+        <h2>Introduction to Computer Science</h2>
+        <p>Description: A beginner course in computer science.</p>
+        <p>Available Seats: <span id="availability-CS101">25</span></p>
+        <button class="register-button" onclick="registerForCourse('CS101')">Register</button>
+    </div>
+
+    <div class="course" data-course-id="CS102">
+        <h2>Data Structures</h2>
+        <p>Description: An intermediate course on data structures.</p>
+        <p>Available Seats: <span id="availability-CS102">0</span></p>
+        <button class="register-button" onclick="registerForCourse('CS102')" disabled>Course Full</button>
+    </div>
+
+    <!-- More courses can be listed similarly -->
+
+    <script src="app.js"></script>
+</body>
+</html>
