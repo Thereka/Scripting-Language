@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Portfolio - Image Gallery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .gallery img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        .gallery img.selected {
+            border: 3px solid #007BFF;
+        }
+        #animateButton {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #animateButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Design Portfolio - Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="https://via.placeholder.com/150x100" alt="Image 1" class="gallery-image">
+        <img src="https://via.placeholder.com/150x100" alt="Image 2" class="gallery-image">
+        <img src="https://via.placeholder.com/150x100" alt="Image 3" class="gallery-image">
+    </div>
+
+    <button id="animateButton">Animate Selected Image</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
